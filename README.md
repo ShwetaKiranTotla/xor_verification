@@ -1,9 +1,10 @@
 # About this repository
-This repository verifies the design of an XOR gate logic cell through RTL coding in Verilog and comprehensive verification using the Cocotb framework.
-It includes extensive simulation-based testing, including randomized and directed testing, to validate the correctness and performance of the logic cell design.
-Utilized drivers, scoreboard, and monitor for efficient and thorough design verification. (Location: tests/ifc_coverage.py)
-Addon:
-Solving an ethernet payload problem using constrained random vector generation. (Location: tests/crv.py)
+This repository verifies the design of an XOR gate logic cell through RTL coding in Verilog and comprehensive verification using the Cocotb framework.  
+It includes extensive simulation-based testing, including randomized and directed testing, to validate the correctness and performance of the logic cell design.  
+Utilized drivers, scoreboard, and monitor for efficient and thorough design verification. (Location: tests/ifc_coverage.py)  
+* Addon:  
+Solving an ethernet payload problem using constrained random vector generation. (Location: tests/crv.py)  
+
 ## IP Introduction
 
 A typical DUT has 3 set's of interfaces
