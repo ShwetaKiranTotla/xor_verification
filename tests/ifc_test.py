@@ -33,10 +33,9 @@ class InputDriver(BusDriver):
 	
 	def __init__(self,dut,name,clk):
 		BusDriver.__init__(self,dut,name,clk)
-		self.bus.en.value=0 #can we set this value to 1 as well?
+		self.bus.en.value=0 
 		self.clk=clk
 
-#In the video, try to undertsand how we might get an error when there are two always blocks
 	async def _driver_send(self,value,sync=True):
 		if self.bus.rdy.value !=1:
 			await RisingEdge(self.bus.rdy)
@@ -67,4 +66,3 @@ class OutputDriver(BusDriver):
 			await RisingEdge(self.clk)		
 			await NextTimeStep()
 			self.bus.en.value=0
-##added comment for test
