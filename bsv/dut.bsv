@@ -1,4 +1,5 @@
 import FIFOF::*;
+
 interface Ifc_dut;
 	(*ready="din_rdy",enable="din_en"*)
 method Action din(Bit#(8) value);
