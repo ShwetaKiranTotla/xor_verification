@@ -1,4 +1,10 @@
-# IP Introduction
+# About this repository
+This repository verifies the design of an XOR gate logic cell through RTL coding in Verilog and comprehensive verification using the Cocotb framework.
+It includes extensive simulation-based testing, including randomized and directed testing, to validate the correctness and performance of the logic cell design.
+Utilized drivers, scoreboard, and monitor for efficient and thorough design verification. (Location: tests/ifc_coverage.py)
+Addon:
+Solving an ethernet payload problem using constrained random vector generation. (Location: tests/crv.py)
+## IP Introduction
 
 A typical DUT has 3 set's of interfaces
 
@@ -12,7 +18,7 @@ The control interface is used by other hardware to control or change the behavio
 
 The configuration interface is used by the processor to change the behavior of the IP.
 
-# IP Functionality
+## IP Functionality
 
 * It uses the RDY EN Protocol on all interfaces
 * The DUT takes N 8 bit input values. Adds them and outputs the result.
@@ -22,7 +28,7 @@ The configuration interface is used by the processor to change the behavior of t
 * The decision on which length is used (port or register) is controlled via a bit in the configuration space.  
 * Once the DUT starts accumulating the bytes it ignores changes to the length field or register until it has generated the output.
 
-# Interfaces
+## Interfaces
 
 | Port         | Direction | Width | Description                                         |
 | --           | --        | --    | ------                                              |
@@ -42,7 +48,7 @@ The configuration interface is used by the processor to change the behavior of t
 | cfg_data_in  | in        | 32    | The data that needs to be written, ignored for read |
 | cfg_data_out | out       | 32    | The data returned by read operation                 |
 
-# Configuration Space Register Map
+## Configuration Space Register Map
 
 | Address | Access | Bit map | reset value | Field             | Description                                                                      |
 | ---     | ---    | ---     | ---         | ---               | ------                                                                           |
