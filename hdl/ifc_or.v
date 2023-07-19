@@ -19,8 +19,6 @@
 // y_en                           I     1
 //
 // No combinational paths from inputs to outputs
-//
-//
 
 `ifdef BSV_ASSIGNMENT_DELAY
 `else
